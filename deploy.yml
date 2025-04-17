@@ -1,4 +1,4 @@
-----
+---
  - name: Deploy Maven Artifact
    hosts: local
    become: yes

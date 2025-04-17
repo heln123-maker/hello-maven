@@ -1,9 +1,8 @@
----
- - name: Deploy Maven Artifact
-   hosts: local
-   become: yes
-   tasks:
+- name: Deploy Maven Artifact
+  hosts: localhost
+  become: yes
+  tasks:
     - name: Copy the artifact to the deployment directory
-      copy:
-        src: "/var/lib/jenkins/workspace/HelloMavenCI/target/HelloMaven-1.0-SNAPSHOT.jar"
+      ansible.builtin.copy:
+        src: "/var/lib/jenkins/workspace/hellomaven-ci/target/HelloMaven-1.0-SNAPSHOT.jar"
         dest: "/opt/deployment/HelloMaven.jar"

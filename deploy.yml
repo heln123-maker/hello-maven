@@ -12,4 +12,3 @@
       ansible.builtin.copy:
         src: "/var/lib/jenkins/workspace/hellomaven/target/hellomaven-ci-1.0-SNAPSHOT.jar"
         dest: "/opt/deployment/HelloMaven.jar"
-        remote_src: yes
